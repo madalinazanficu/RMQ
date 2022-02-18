@@ -1,0 +1,80 @@
+Zanficu Madalina-Valentina 323CA
+
+                                Homework - Analysis of algorithms
+                                    Range Minimum Query
+
+
+Algorithms:
+1.Sparse Table: main1.cpp && SparseTable.cpp
+Reference:
+-> youtube explanation used for code:
+   https://www.youtube.com/watch?v=c5O7E_PDO4U
+
+Description:
+-> used SparseTable function for preprocessing
+-> RMQ_SparseTable function for queries respons
+
+
+2.Segment Tree: main2.cpp && SegmentTree.cpp
+Reference:
+-> code snippets from: 
+   https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/
+
+Description:
+-> buildTree function for memory allocations
+-> assignTree function for preprocessing the array elements
+-> RMQ_SegmentTree function for processing queries
+-> findMin for queries respons
+
+
+3.Square Root: main3.cpp && SquareRoot.cpp
+Reference:
+-> youtube explanation used for code:
+   https://www.youtube.com/watch?v=ZakhE_eaonY&t=419s
+
+Description:
+-> used SquareRoot function for preprocessing
+-> RMQ_SquareRoor for queries respons
+
+
+Tests: TOTAL = 45
+Def :
+    N = number of elements from the array, N is between [0, 10 ^ 5]
+    M = number of queries, M is between [0, 10 ^ 6]
+    c = const;
+
+Tests 1 - 10 : used tests from infoarena to check the accuracy of my algorithms in the first place
+Reference: https://www.infoarena.ro/problema/rmq?action=attach-list
+
+Conclusion: the algorithms perform very well from correctness perspective.
+
+Tests 11 - 30 : generate my own tests with random number of elements and queries
+N, M are between [0, c * 10 ^ 5]
+
+The role of these random tests is to see the performance of every algorithms 
+(time execution and memory usage) in random circumstances.
+
+Test 31 - 33: generate tests with N >> M to discuss the performance from this perspective.
+N, M are between [0, c * 10 ^ 5];
+
+Test 34 - 36: generate tests with N ~ M
+N, M are between [0, c * 10 ^ 5];
+
+Test 37 - 39: generate tests with M >> N
+N is between [0, 10 ^ 4]
+M is between [0, 10 ^ 6]
+
+Test 40 - 42: generate tests to indicate the efficiency of the algorithms on favorable cases 
+(elements are sorted in ascending order)
+*Test40* - N >> M
+*Test41* - N ~ M
+*Test42* - N << M
+
+Test 43 - 45: generate tests with elements sorted in descending order
+*Test 43* - N >> M
+*Test 44* - N << M
+*Test 45* - N ~ M
+
+Test generator: 
+-> random_generator.cpp: used to generate inputs
+-> output_generator.cpp: used to generate the correct outputs
